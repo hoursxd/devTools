@@ -1,0 +1,37 @@
+/*html, a, p, h1, h2, h3, h4, h5, span, button, option, li, input{*/
+/*    font-family: 'Microsoft YaHei',sans-serif;*/
+/*}*/
+.dropdown-menu2{
+    width: 330px;
+}
+.dropdown-menu2 li{
+    display: inline-block;
+    width: 160px;
+}
+
+.dropdown-menu-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.dropdown-menu3{
+    width: 820px;
+    height: 650px;
+    padding: 8px;
+}
+.dropdown-menu3 li{
+    display: inline-block;
+    width: 160px;
+    padding: 3px 6px;
+}
+.dropdown-li-fenlei{
+    text-align: center;
+    color: #0fd59d;
+}
+.dropdown-menu3 li a{
+    display: block;
+}
+
+
+

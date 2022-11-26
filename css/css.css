@@ -1,0 +1,251 @@
+@charset "UTF-8";
+	a,article,blockquote,body,div,footer,h1,h2,header,html,p,span {
+	margin:0;
+	padding:0;
+	border:0;
+	vertical-align:baseline;
+	font:inherit;
+	font-size:100%
+}
+body {
+	line-height:1;
+	-webkit-text-size-adjust:none;
+	-ms-overflow-style:scrollbar
+}
+article,footer,header {
+	display:block
+}
+blockquote {
+	quotes:none
+}
+blockquote:after,blockquote:before {
+	content:'';
+	content:none
+}
+*,:after,:before {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box
+}
+body {
+	background:#F4F4F4
+}
+html {
+	overflow-x:hidden;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%
+}
+::-moz-selection {
+	background-color:#EEE;
+	color:#000
+}
+::selection {
+	background-color:#EEE;
+	color:#000
+}
+::-webkit-scrollbar {
+	width:8px;
+	height:8px
+}
+::-webkit-scrollbar-thumb {
+	height:40px;
+	border-radius:16px;
+	background-color:#ddd
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color:#ccc
+}
+body {
+	color:#444;
+	font-weight:400;
+	font-size:.875rem;
+	font-family:-apple-system,BlinkMacSystemFont,Avenir,"Avenir Next","Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+	line-height:1.4;
+	text-rendering:geometricPrecision;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale
+}
+a {
+	color:#5AA6ED;
+	text-decoration:none
+}
+a:hover {
+	color:#444
+}
+blockquote,p {
+	margin:10px 0
+}
+blockquote,p {
+	letter-spacing:1px
+}
+h2,h3 {
+	margin-top:0;
+	margin-bottom:.275em;
+	color:inherit;
+	font-weight:500
+}
+h1 {
+	font-size:1.2rem;text-align:center
+}
+h2 {
+	font-size:1.6rem;line-height:1.2;
+}
+h3 {
+	font-size:1.225rem
+}
+blockquote {
+	padding:0 15px;
+	border-left:solid 4px #FF7F00
+}
+::-webkit-input-placeholder {
+	color:#bbb!important;
+	opacity:1
+}
+:-moz-placeholder {
+	color:#bbb!important;
+	opacity:1
+}
+::-moz-placeholder {
+	color:#bbb!important;
+	opacity:1
+}
+:-ms-input-placeholder {
+	color:#bbb!important;
+	opacity:1
+}
+.container {
+	margin-right:auto;
+	margin-left:auto;
+	padding-right:.4rem;
+	padding-left:.4rem;
+	width:100%
+}
+.container.grid-sm {
+	max-width:780px
+}
+.column {
+	padding-right:.4rem;
+	padding-left:.4rem;
+	max-width:100%;
+	-ms-flex:1;
+	flex:1
+}
+
+.s-content .column {
+	padding:.5rem
+}
+header {
+	margin:10px auto 0;
+	max-width:740px;
+	text-align:center
+}
+header h3 {
+	font-size:1rem
+}
+.nav {
+	margin:0 auto;
+	padding:.5rem;
+	max-width:600px;
+	text-align:center;line-height:1;
+}
+.nav-item {
+	display:inline;
+	padding:0 .5rem;
+	color:#8B7B8B
+}
+footer {
+	margin:50px auto 30px;
+	max-width:600px;
+	color:#999;
+	text-align:center
+}
+footer a {
+	color:#999
+}
+article span {
+	color:#999
+}
+article h3 {
+	padding:0 15px;
+	border-left:solid 4px #8B8B00
+}
+article blockquote,article p {
+	margin:20px 0
+}
+@media screen and (max-width:680px) {
+	article h1 {
+	font-size:1.6rem
+}
+article h3 {
+	font-size:1.175rem
+}
+}.comment-list {
+	margin:0;
+	padding-left:0;
+	list-style-type:none
+}
+.comment-parent {
+	margin:20px 0;
+	border-radius:5px;
+	background:#fff
+}
+.comment-view {
+	padding:10px 30px
+}
+.comment-header {
+	display:inline-block;
+	width:100%
+}
+.comment-header .comment-author {
+	float:left;
+	display:inline-block;
+	margin:0 5px 0 10px;
+	font-size:13px;
+	line-height:24px
+}
+.comment-content {
+	color:#555
+}
+.comment-content {
+	margin-bottom:10px
+}
+.comment-content p {
+	margin:0
+}
+.gg {
+	margin-bottom:10px;text-align:center
+}
+@media screen and (max-width:376px) {
+header {
+	margin:5px auto 0;
+
+}
+.nav {
+	padding:.225rem;
+}
+article blockquote,article p {
+	margin:14px 0
+}
+h2,h3 {
+	margin-top:0;
+	margin-bottom:.125em;
+	color:inherit;
+	font-weight:500
+}
+article h1 {
+	font-size:1.15rem;
+}
+header h2 {
+	font-size:1.2rem
+}
+article h3 {
+	font-size:1rem;
+}
+blockquote {
+	padding:0 5px;
+	border-left:solid 4px #FF7F00
+}
+blockquote,p {
+	margin:2px 0
+}
+}

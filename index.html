@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="os-mac screen-desktop-wide device-desktop">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev-Tools</title>
+    <link href="css/home-1589270335000.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/public.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="bg-color-f7">
+
+    <style>
+        .myNotice {
+            display: inline-block;
+        }
+
+        .hasNotice {
+            position: relative;
+        }
+
+        .myNotice.hasNotice:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        a.hasNotice:after {
+            left: 10px;
+            top: 50% !important;
+            margin-top: -4px;
+        }
+    </style>
+
+    <header class="header">
+        <div class="row-fluid" style="padding: 0 20px">
+            <!-- 导航模块-->
+            <div class="header-nav-list first-nav comt-top-nva" style="position:relative;">
+                <a class="logo" style="font-size: 34px;padding: 0">
+                    <span style="color:#4A5560;">Dev-Tools</span></a>
+
+            </div>
+            <br style="clear:both;">
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <ul class="nav nav-tabs tab-after custom-tab custom-tab-two">
+            <li class=" active ">
+                <a class="cursor-pointer" href="index.html#" data-recent="yes">
+                    JSON在线解析 </a>
+            </li>
+            <li class=" ">
+                <a class="cursor-pointer" href="timestamp.html" data-recent="yes">
+                    时间戳 </a>
+            </li>
+            
+        </ul>
+
+    </div>
+    <main class="row-fluid editor-con" style="font-family: 'menlo','monospace', 'Tahoma','微软雅黑','幼圆'!important">
+        <!--    <div class="container" >-->
+        <div class="col-md-5 col-xs-5" style="padding: 0px; height: 100%;">
+            <div class="numberedtextarea-wrapper "><textarea id="json-src" placeholder="在此输入json字符串或XML字符串..."
+                    class="form-control common-font-size"
+                    style="height:100%;padding:10px 10px 10px 30px;border:0;border-right:solid 1px #E5EBEE;    position: relative; z-index: 999;border-bottom:solid 1px #eee;border-radius:0;resize: none; outline:none;"></textarea>
+                <div class="numberedtextarea-line-numbers"
+                    style="padding-top: 10px; line-height: 20px; font-family: menlo, monospace, Tahoma, 微软雅黑, 幼圆; width: 30px;">
+                    <div class="numberedtextarea-number numberedtextarea-number-1" style="margin-bottom: 10px;">1</div>
+                </div>
+            </div>
+        </div>
+        <div id="dragEle" style="position: absolute; cursor: move;"></div>
+        <div class="col-md-7 col-xs-7" style="padding: 0px; position: relative; height: 100%;">
+            <div class="tool" style="position:absolute;">
+                <div style="display: inline-block;vertical-align: top;line-height: 100%">
+                    <a href="index.html#" class="tip zip" title="" data-placement="bottom" data-original-title="压缩"
+                        style="color:#999;"><i class="fa fa-database"></i></a>
+                    <a href="index.html#" class="tip xml" title="" data-placement="bottom"
+                        data-original-title="转XML" style="color:#999;"><i class="fa fa-file-excel-o"></i></a>
+                    <a href="index.html#" class="tip shown" title=""
+                        data-placement="bottom" data-original-title="显示行号"><i class="fa fa-sort-amount-asc"></i></a>
+                    <a href="index.html#" class="tip clear" title=""
+                        data-placement="bottom" data-original-title="清空"><i class="fa fa-trash"></i></a>
+                    <a href="index.html#" class="tip save" title=""
+                        data-placement="bottom" data-original-title="保存"><i class="fa fa-download"></i></a>
+                    <a href="index.html#" class="tip copy" title=""
+                        data-clipboard-target="#json-target" data-placement="bottom" data-original-title="复制"><i
+                            class="fa fa-copy"></i></a>
+                    <a href="index.html#" class="tip compress" title=""
+                        data-placement="bottom" data-original-title="折叠"><i class="fa fa-compress"></i></a>
+                    <a href="index.html#" class="tip fullScreen" title=""
+                        data-placement="bottom" data-original-title="全屏"><i class="fa fa-arrows-alt"></i></a>
+                    <!--                <a href="#" class="tip share" title="分享" data-placement="bottom"><i class="fa fa-share-alt-square"></i></a>-->
+                    <label style="cursor: pointer">
+                        <input type="checkbox" checked="checked" name="cancelZY" id="cancelZY"
+                            style="margin-top: 0;position: relative;top: 2px">
+                        保留转义
+                    </label>
+
+                </div>
+                <ul class="nav-tabs-two" style="display: inline-block;vertical-align: middle;line-height: 100%">
+                    <li>
+                        <!--
+          <a href="/bejsonyun.php" class="tip" title="比杰森云59.9元/月" data-placement="bottom" target="_blank" rel="nofollow" data-original-title="比杰森云59.9元/月"><font color="blue"><b>比杰森云</b></font></a>
+-->
+
+
+                    </li>
+                </ul>
+            </div>
+            <div id="right-box" class="common-font-size bg-color-ff"
+                style="width:100%;height: 100%;border:solid 1px #f6f6f6;border-radius:0;resize: none;overflow-y:scroll; outline:none;position:relative;padding-top:56px;">
+                <p class="editor-tip">可点击key和value值进行编辑</p>
+                <div id="hidden-message-box" class="alert alert-danger alert-dismissible" role="alert"
+                    style="display:none;margin-bottom:0;padding:10px 2vw;font-size: calc(var(--target) + 4px);">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">×</span>
+                    </button>
+                    <p><i class="fa fa-bell" aria-hidden="true"></i>
+                        提示：
+                        <span id="hidden-message">
+                            默认警告
+                        </span>
+
+                    </p>
+                </div>
+                <div id="line-num"
+                    style="background-color:#fafafa;padding:0px 8px;float:left;border-right:dashed 1px #E5EBEE;display:none;z-index:-1;color:#999;position:absolute;text-align:center;over-flow:hidden;">
+                    <div>1<div>
+                            <div>2<div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ro" id="json-target" style="padding:0px 25px;white-space: pre-line;word-wrap:break-word;">
+                </div>
+            </div>
+        </div>
+        <br style="clear:both;">
+        <!--    </div>-->
+    </main>
+
+
+    <!-- 底部 -->
+
+    <script src="js/lang.js"></script>
+
+    <style>
+        .popup-link-info-box {
+            position: absolute;
+            right: 58px;
+            top: 0;
+            background-color: #fff;
+            -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: none;
+        }
+
+        .popup-link-info-box li {
+            float: left;
+            margin-right: 10px;
+            border: 1px solid #eee;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .popup-link-info-box li p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .popup-link-info-box li p span {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .popup-link-info-box li .popup-wechat-wrapper {}
+
+        .popup-link-info-box li .popup-wechat-wrapper img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+
+    <link href="css/jquery.numberedtextarea.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.message.js"></script>
+    <div style="clear:both;"></div>
+    <div id="jquery-beauty-msg"></div>
+    <script src="js/bignumber.min.js"></script>
+    <script src="js/jquery.json.js"></script>
+    <script src="js/jquery.xml2json.js"></script>
+    <script src="js/jquery.json2xml.js"></script>
+    <script src="js/json2.js"></script>
+    <script src="js/jsonlint.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/jquery.numberedtextarea.js"></script>
+    <script src="js/drag.js"></script>
+
+    <script src="js/zui.min.js"></script>
+
+
+    <script type="text/javascript">
+        $('textarea').numberedtextarea();
+        var current_json = '';
+        var current_json_str = '';
+        var xml_flag = false;
+        var zip_flag = false;
+        var shown_flag = false;
+        var compress_flag = false;
+        var isXml = false;
+        $('.tip').tooltip();
+
+        function init() {
+            xml_flag = false;
+            zip_flag = false;
+            shown_flag = false;
+            compress_flag = false;
+            isXml = false;
+            renderLine();
+            $('.xml').attr('style', 'color:#999;');
+            $('.zip').attr('style', 'color:#999;');
+
+        }
+
+        $('#cancelZY').click(function () {
+            init();
+            var content = $.trim($('#json-src').val());
+            var result = '';
+            if (content != '') {
+                //如果是xml,那么转换为json
+                if (content.substr(0, 1) === '<' && content.substr(-1, 1) === '>') {
+                    isXml = true;
+                    try {
+                        var json_obj = $.xml2json(content);
+                        content = JSON.stringify(json_obj);
+                    } catch (e) {
+                        result = '解析错误：<span style="color: #f1592a;font-weight:bold;">' + e.message + '</span>';
+                        current_json_str = result;
+                        $('#json-target').html(result);
+                        return false;
+                    }
+
+                }
+                try {
+                    var hasZY = $('#cancelZY').prop('checked');
+                    if (hasZY) {
+                        content = content.replace(/\\/g, '\\\\');
+                        content = content.replace(/\\"/g, '\\\\"');
+                    }
+
+                    current_json = jsonlint.parse(content);
+                    current_json_str = JSON.stringify(current_json);
+                    //current_json = JSON.parse(content);
+                    result = new JSONFormat(content, 4).toString();
+                } catch (e) {
+                    result = '<span style="color: #f1592a;font-weight:bold;">' + e + '</span>';
+                    current_json_str = result;
+                }
+
+                $('#json-target').html(result);
+            } else {
+                $('#json-target').html('');
+            }
+        });
+        $('#json-src').keyup(function () {
+            init();
+            var content = $.trim($(this).val());
+            var result = '';
+            if (content != '') {
+                //如果是xml,那么转换为json
+                if (content.substr(0, 1) === '<' && content.substr(-1, 1) === '>') {
+                    try {
+                        var json_obj = $.xml2json(content);
+                        content = JSON.stringify(json_obj);
+                    } catch (e) {
+                        result = '解析错误：<span style="color: #f1592a;font-weight:bold;">' + e.message + '</span>';
+                        current_json_str = result;
+                        $('#json-target').html(result);
+                        return false;
+                    }
+
+                }
+                try {
+                    var hasZY = $('#cancelZY').prop('checked');
+                    if (hasZY) {
+                        content = content.replace(/\\/g, '\\\\');
+                        content = content.replace(/\\"/g, '\\\\"');
+                    }
+                    current_json = jsonlint.parse(content);
+                    current_json_str = JSON.stringify(current_json);
+                    //current_json = JSON.parse(content);
+                    result = new JSONFormat(content, 4).toString();
+                } catch (e) {
+                    result = '<span style="color: #f1592a;font-weight:bold;">' + e + '</span>';
+                    current_json_str = result;
+                }
+
+                $('#json-target').html(result);
+            } else {
+                $('#json-target').html('');
+            }
+
+        });
+        $('#right-box').keyup(function () {
+            var text = $('#json-target').html().replace(/<br\/>/g, "\n").replace(/<br>/g, "\n").replace(/<[^>]+>/g, "").replace(/&nbsp;/ig, " ").replace(/Object{...}/ig, "").replace(/Array\[[0-9]+\]/ig, "");
+            if (isXml) {
+                $('#json-src').val($.json2xml(JSON.parse(text)))
+            } else {
+                $('#json-src').val(text)
+            }
+        });
+        $('.xml').click(function () {
+            if (xml_flag) {
+                $('#json-src').keyup();
+            } else {
+                var result = $.json2xml(current_json);
+                $('#json-target').html('<textarea style="width:100%;position:absolute;height: 80vh;min-height:480px;border:0;resize:none;">' + result + '</textarea>');
+                xml_flag = true;
+                $(this).attr('style', 'color:#15b374;');
+            }
+
+        });
+        $('.shown').click(function () {
+            if (!shown_flag) {
+                renderLine();
+                $('#line-num').show();
+                $('.numberedtextarea-line-numbers').show();
+                shown_flag = true;
+                $(this).attr('style', 'color:#15b374;');
+            } else {
+                $('#line-num').hide();
+                $('.numberedtextarea-line-numbers').hide();
+                shown_flag = false;
+                $(this).attr('style', 'color:#999;');
+            }
+        });
+
+        function renderLine() {
+            var line_num = $('#json-target').height() / 20;
+            $('#line-num').html("");
+            var line_num_html = "";
+            for (var i = 1; i < line_num + 1; i++) {
+                line_num_html += "<div>" + i + "<div>";
+            }
+            $('#line-num').html(line_num_html);
+        }
+
+        $('.zip').click(function () {
+            if (zip_flag) {
+                $('#json-src').keyup();
+            } else {
+                //$('#json-target').html(current_json_str.replace(/</g,"&lt;").replace(/>/g,"&gt;"));
+                $('#json-target').html("<xmp>" + current_json_str + "</xmp>");
+                zip_flag = true;
+                $(this).attr('style', 'color:#15b374;');
+            }
+
+        });
+        $('.compress').click(function () {
+            if (!compress_flag) {
+                $(this).attr('style', 'color:#15b374;');
+                //$(this).attr('title','取消折叠').tooltip('fixTitle').tooltip('show');
+                $($(".fa-minus-square-o").toArray().reverse()).click();
+                compress_flag = true;
+            } else {
+                while ($(".fa-plus-square-o").length > 0) {
+                    $(".fa-plus-square-o").click();
+                }
+                compress_flag = false;
+                $(this).attr('style', 'color:#555;');
+                $(this).attr('title', '折叠').tooltip('fixTitle').tooltip('show');
+            }
+        });
+        $('.clear').click(function () {
+            $('#json-src').val('');
+            $('#json-target').html('');
+        });
+        $('.share').click(function () {
+            $('#hidden-message-box').hide();
+            try {
+                var jqxhr = $.post("/shares/", { "content": current_json_str }, function (data) {
+                    var k = data;
+                })
+                    .success(function (data) {
+                        window.location.href = "share.html?k=" + data;
+                    })
+                    .error(function (data) {
+                        $('#hidden-message-box').hide();
+                        if (data.status <= 400 && data.status > 200) {
+                            $('#hidden-message').html(data.responseText);
+                        } else if (data.status > 400) {
+                            $('#hidden-message').html("服务器升级中...此功能暂不可用.");
+                        }
+                        $('#hidden-message-box').show();
+                    }).done(function (data) {
+                        $('#hidden-message-box').hide();
+                        if (data.responseText != undefined) {
+                            $('#hidden-message').html(data.responseText);
+                        } else {
+                            $('#hidden-message').html("服务器升级中...此功能暂不可用.");
+                        }
+                        $('#hidden-message-box').show();
+                    }).complete(function (data) {
+                        $('#hidden-message-box').show();
+                    });
+            } catch (e) {
+                $('#hidden-message-box').show();
+            } finally {
+                setTimeout(function () {
+                    $('#hidden-message-box').hide();
+                }, 3000);
+            }
+
+
+        });
+        $('.fullScreen').click(function () {
+            $('#dragEle').css('left', '');
+            $('main .col-md-7').css('width', '');
+            $('main .col-md-5').css('width', '');
+            $('.editor-con').toggleClass('editor-full-screen');
+            $('body').toggleClass('overflow-hidden');
+            $('.fullScreen .fa').toggleClass('fa-minus fa-arrows-alt');
+            if ($(this).attr('data-original-title') === '全屏') {
+                $(this).attr('data-original-title', '最小化')
+            } else {
+                $(this).attr('data-original-title', '全屏')
+            }
+        });
+        (function ($) {
+            $.fn.innerText = function (msg) {
+                if (msg) {
+                    if (document.body.innerText) {
+                        for (var i in this) {
+                            this[i].innerText = msg;
+                        }
+                    } else {
+                        for (var i in this) {
+                            this[i].innerHTML.replace(/&amp;lt;br&amp;gt;/gi, "n").replace(/(&amp;lt;([^&amp;gt;]+)&amp;gt;)/gi, "");
+                        }
+                    }
+                    return this;
+                } else {
+                    if (document.body.innerText) {
+                        return this[0].innerText;
+                    } else {
+                        return this[0].innerHTML.replace(/&amp;lt;br&amp;gt;/gi, "n").replace(/(&amp;lt;([^&amp;gt;]+)&amp;gt;)/gi, "");
+                    }
+                }
+            };
+        })(jQuery);
+        $('.save').click(function () {
+            // var content = JSON.stringify(current_json);
+            // $('#txt-content').val(content);
+            //var text = "hell world";
+            var html = $('#json-target').html().replace(/\n/g, '<br/>').replace(/\n/g, '<br>');
+            var text = $('#json-target').innerText().replace('　　', '    ');
+            var blob = new Blob([text], { type: "application/json;charset=utf-8" });
+            var timestamp = new Date().getTime();
+            saveAs(blob, "format." + timestamp + ".json");
+        });
+        $('.copy').click(function () {
+            //$.msg("成功复制到粘贴板","color:#00D69C;");
+            // $(this).tooltip('toggle')
+            //       .attr('data-original-title', "复制成功！")
+            //       .tooltip('fixTitle')
+            //       .tooltip('toggle');
+        });
+        var clipboard = new Clipboard('.copy');
+        $('#json-src').keyup();
+
+        //拖拽
+        var totalWidth = $(window).outerWidth();
+        var forbidenWidth = totalWidth - 400;
+        $('#dragEle').myDrag({
+            parent: 'parent', //定义拖动不能超出的外框,拖动范围
+            randomPosition: false, //初始化随机位置
+            direction: 'x', //方向
+            handler: false, //把手
+            dragStart: function (x, y) {
+                totalWidth = $(window).outerWidth();
+                forbidenWidth = totalWidth - 400;
+            }, //拖动开始 x,y为当前坐标
+            dragEnd: function (x, y) {
+                //必须重新计算禁止拖拽width，否则直接执行dragend的时候界面会渲染错误
+                totalWidth = $(window).outerWidth();
+                forbidenWidth = totalWidth - 400;
+                if (x > forbidenWidth) {
+                    $('#dragEle').offset({ top: 0, left: forbidenWidth - 5 });
+                    $('main .col-md-5').width(forbidenWidth);
+                    $('main .col-md-7').width(totalWidth - forbidenWidth);
+                } else if (x < 200) {
+                    $('#dragEle').offset({ top: 0, left: 195 });
+                    $('main .col-md-5').width(200);
+                    $('main .col-md-7').width(totalWidth - 200);
+                } else {
+                    $('main .col-md-5').width(x);
+                    $('main .col-md-7').width(totalWidth - x - 1);
+                }
+            }, //拖动停止 x,y为当前坐标
+            dragMove: function (x, y) {
+                if (x > forbidenWidth || x < 200) {
+
+                } else {
+                    $('main .col-md-5').width(x);
+                    $('main .col-md-7').width(totalWidth - x - 1);
+                }
+            } //拖动进行中 x,y为当前坐标
+        });
+        $(window).resize(function () {
+            $('#dragEle').css('left', '');
+            $('main .col-md-7').css('width', '');
+            $('main .col-md-5').css('width', '');
+        })
+
+        // $('select.chosen-select').chosen({
+        //     no_results_text: '没有找到',    // 当检索时没有找到匹配项时显示的提示文本
+        //     disable_search_threshold: 10, // 10 个以下的选择项则不显示检索框
+        //     search_contains: true         // 从任意位置开始检索
+        // });
+        //搜索
+        $('select.chosen-select').on('change', function () {
+
+            window.location.href = $(this).val()
+            // window.location.href = "/" + $('#t_mod').val() + "/search-" + $('#t_keyword').val()
+        });
+
+        /*收藏*/
+        $('body').on('click', '.xf-collection', function () {
+            alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!')
+        })
+
+    </script>
+
+    <div id="transmart-crx-shadow-root"></div>
+</body>
+
+</html>
